@@ -4,6 +4,7 @@ import Parser from '@wiris/mathtype-html-integration-devkit/src/parser.js';
 import Constants from '@wiris/mathtype-html-integration-devkit/src/constants.js';
 import MathML from '@wiris/mathtype-html-integration-devkit/src/mathml.js';
 
+import config from './config.json';
 import {version as pluginVersion} from './package.json';
 
 /**
@@ -244,9 +245,7 @@ export class FroalaIntegration extends IntegrationModel {
         /**@type {integrationModelProperties} */
         var froalaIntegrationProperties = {};
         froalaIntegrationProperties.target = target;
-        froalaIntegrationProperties.serviceProviderProperties = {};
-        froalaIntegrationProperties.serviceProviderProperties.URI = 'https://www.wiris.net/demo/plugins/app';
-        froalaIntegrationProperties.serviceProviderProperties.server = 'java';
+        froalaIntegrationProperties.serviceProviderProperties = config.serviceProviderProperties;
         froalaIntegrationProperties.version = pluginVersion;
         froalaIntegrationProperties.scriptName = "wiris.js";
         froalaIntegrationProperties.environment = {};

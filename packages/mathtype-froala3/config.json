@@ -1,0 +1,6 @@
+{
+    "serviceProviderProperties": {
+        "URI": "https://www.wiris.net/demo/plugins/app",
+        "server": "java"
+    }
+}
